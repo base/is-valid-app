@@ -1,6 +1,6 @@
 {
   "name": "is-valid-app",
-  "description": "Wrapper around is-valid-instance and is-registered. Returns true if `app` is a valid instance of base and a plugin is not registered yet.",
+  "description": "Wrapper around is-valid-instance and is-registered for validating `base` plugins. Returns true if `app` is a valid instance of base and a plugin is not registered yet.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/is-valid-app",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
@@ -19,22 +19,38 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "is-registered": "^0.1.4",
+    "is-valid-instance": "^0.1.0"
+  },
   "devDependencies": {
-    "gulp-format-md": "*",
+    "base": "^0.8.1",
+    "gulp-format-md": "^0.1.9",
     "mocha": "^2.5.3"
   },
   "keywords": [],
   "verb": {
+    "toc": false,
     "layout": "default",
+    "tasks": [
+      "readme"
+    ],
     "plugins": [
       "gulp-format-md"
     ],
     "related": {
-      "list": []
+      "list": [
+        "is-registered",
+        "is-valid-instance",
+        "base"
+      ]
     },
     "reflinks": [
-      "verb"
-    ]
+      "verb",
+      "base"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }

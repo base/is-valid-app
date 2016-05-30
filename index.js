@@ -7,16 +7,18 @@
 
 'use strict';
 
-var debug = require('debug')('is-valid-app');
+var isRegistered = require('is-registered');
+var isValid = require('is-valid-instance');
 
-module.exports = function(config) {
-  return function(app) {
-    if (this.isRegistered('is-valid-app')) return;
-    debug('initializing "%s", from "%s"', __filename, module.parent.id);
-
-    this.define('isValid', function() {
-      debug('running isValid');
-      
-    });
-  };
+module.exports = function(app, name, types) {
+  if (typeof name !== 'string') {
+    throw new TypeError('expected plugin name to be a string');
+  }
+  if (!isValid(app, types)) {
+    return false;
+  }
+  if (isRegistered(app, name)) {
+    return false;
+  }
+  return true;
 };
