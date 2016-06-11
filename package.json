@@ -10,7 +10,8 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "main": "index.js",
   "engines": {
@@ -20,8 +21,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "is-registered": "^0.1.4",
-    "is-valid-instance": "^0.1.0"
+    "debug": "^2.2.0",
+    "is-registered": "^0.1.5",
+    "is-valid-instance": "^0.1.0",
+    "lazy-cache": "^2.0.1"
   },
   "devDependencies": {
     "base": "^0.8.1",
@@ -40,14 +43,15 @@
     ],
     "related": {
       "list": [
+        "base",
         "is-registered",
-        "is-valid-instance",
-        "base"
+        "is-valid-instance"
       ]
     },
     "reflinks": [
+      "base",
       "verb",
-      "base"
+      "verb-readme-generator"
     ],
     "lint": {
       "reflinks": true
