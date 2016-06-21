@@ -26,6 +26,6 @@ module.exports = function(app, name, types) {
   }
 
   var debug = utils.debug('base:generate:' + name);
-  debug('initializing from <%s>', module.parent.id);
+  debug('initializing from <%s>', (module.parent && module.parent.id) || __dirname);
   return true;
 };
