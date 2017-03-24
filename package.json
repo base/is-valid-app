@@ -1,7 +1,7 @@
 {
   "name": "is-valid-app",
   "description": "Wrapper around is-valid-instance and is-registered for validating `base` plugins. Returns true if `app` is a valid instance of base and a plugin is not registered yet.",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/node-base/is-valid-app",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "contributors": [
